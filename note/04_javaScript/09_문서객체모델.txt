@@ -1,0 +1,22 @@
+문서 객체 모델 : 넓은 의미로 HTML 페이지를 인식하는 방식이고 좁은 의미로 document객체와 관련된 객체의 집합
+문서 객체 모델과 관련 용어 :
+1) 태그를 자바스크립트에서 이용할 수 있는 객체로 만든 것이 문서 객체.
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>INDEX</title>
+</head>
+<body>
+    <h1>TEXT NODE</h1>
+    <img src="img/orange.jpg" alt="오렌지" />
+</body>
+</html>
+2) 위의 HTML 페이지를 아래와 같이 트리 모양의 문서 객체 모델로 나타 낼 수 있고 각 요소를 노드라 부른다.
+3) HTML 페이지에 적혀 있는 태그를 읽으며 생성하는 것을 정적으로 문서 객체를 생성한다고 하고, HTML 원 페이지에는 없던 문서 객체를 생성하는 것을 동적으로 문서 객체를 생성한다고 한다. 
+문서 객체 만들기 (1) : 텍스트 노드를 갖는 문서 객체
+1) 동적으로 문서 객체를 만들기 위해
+  - document 객체의 노드 생성
+    - createElement(tagName) : 요소 노드를 생성
+    - createTextNide(text) : 텍스트 노드를 생성
+2) 문서 객체 연결
+  - 문자 객체의 연결 메서드
+    - appendChild(node) : 객체에 노드를 연결

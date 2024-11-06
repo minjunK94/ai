@@ -1,0 +1,8 @@
+JDBC 프로그래밍 개념 : 데이터베이스와 연결되어 데이터를 주고 받을 수 잇게 해주는 인터페이스. 자바 데이터베이스 프로그래밍 API. JDBC 프로그래밍 단계와 사용 클래스
+ 1. JDBC 드라이버 로드 : Class.for.Name() (jdk 17 이상의 버전에서는 생략 가능)
+ 2. 데이터베이스 연결 : DriverManager.getConnection() - Connection 객체 생성 (접속 url, id, pw )
+ 3. Statement 생성 : SQL문 수행할 객체 생성 - Statement, perparedStatement
+ 4. SQL문 전송 : SQL문 Statement 객체 - executeQuery() , executeUpdate() 메소드 이용
+ 5. 결과 받기 : SQL 실행 결과를 반환 받아야 하는 값이 있으면 ResultSet 객체로 받음 - ResultSet
+ 6. 원하는 로직 수행 : 수행한 결과를 읽어 원하는 로직 수행 (반복)
+ 7. 연결 해제 : 사용한 자원을 반납 - close()

@@ -1,0 +1,35 @@
+ORACLE 과 MY SQL 차이점
+(1) DCL (계정생성, 권한부여, 권한박탈, 계정삭제)
+ - create user id identified by pw : 계정생성
+ - grant all in *.* to id : 권한부여
+ - revoke all on *.* from id : 권한박탈
+ - drop user id : 계정삭제
+(2) DDL (제약조건 fk, 시퀀스 없음)
+ - MYSQL 자료형
+    - Tinyint, smallint, int, integer, numeric, float(m,d), double,  char, varchar, BLOB, date(날짜), datetime(날짜/시간), timestamp, time(시간)
+    - foreign key : ORACLE과 사용법은 같지만 하단에 작성.
+ - 시퀀스 
+ - primary key auto_increment : 자동 증가되는 PK(반드시 INT형)
+(3) DML (outer join, and=&&, or==||, 일부단일행함수, rownum이 없어 top-n구문이 다름)
+ - NVL
+    - ifnull(널일수도 있는 필드, 널 대체 값) :매개변수 2개의 타입은 일치하지 않아도 가능
+    - if(조건, 조건이 참일때 반환값, 조건이 참이 아닐때 반환값)
+ - OUTER JOIN
+    - FORM  절에 사용 : 
+        -(left join) 첫 번째 테이블의 데이터를 모두 선택한 후, 두 번째 테이블의 데이터를 결합 조건에 따라 매칭
+        -(right join ) 두 번째 테이블의 데이터를 모두 선택한 후, 첫 번째 테이블의 데이터를 결합 조건에 따라 매칭
+ - 단일행 함수
+     - select sysdate(), now(); -- 현재 날짜와 시간 / select curdate(), curtime() 현재 날짜와 현재 시간
+     - date_format(날짜/시간, 포맷) => 날짜/시간형을 문자형으로 변환
+     - date_format(문자, 포맷) => 문자를 날짜/시간형으로 변환
+     - 포맷 : %Y(년도 4자리), %y(년도 2자리 
+     - 	  %m(01,02,...), %c(1,2,.....)
+     - 	  %d(01,02,...), %e(1,2,.....)
+     - 	  %W monday, %a Mon
+     - 	  %H(24시) %h(12시), %p(오전,오후), %i(분) %s(초)
+     - select date_format(now(), '%y년%m월%e일 %p %h시 %i분 %s초') now; (1)요일 출력
+     - select year(now()), weekday(now()) "요일";  :  (2)요일 출력
+ - 연결연산자 
+     - concat (2개 이상 연결 가능함)
+ - TOP-N 구문 (ROWNUM 대신 사용)
+     - limit n1, n2 -- N1번째 부터 N2번째 까지

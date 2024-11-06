@@ -1,0 +1,14 @@
+1. CSS 단위들 - em, %, px, pt
+2. url()함수를 이용한 background-image, 로컬 폰트 지정 
+3. display - inline, block, inline-block, none (공간도 안보이고 사라짐.)
+4. visibility - none : 공간은 확보 하지만 안보임.
+5. opacity - 투명도를 조절하는 속성
+6. margin과 padding
+7. box-sizing - border를 box안으로
+8. border
+9. 글자관련 속성
+   - font-family(글꼴), font-size(크키), font-weight(두께), font-style(이텔릭체)
+   - line-height(행간격 세로축 정렬), text-align(글자 정렬), text-decoration(글꼴 모양 속성)
+10. 폰트 - 웹폰트(웹으로 연결하여 사용), 로컬폰트(컴퓨터에 다운받아 사용), 시스템 폰트(원래있는 폰트)
+11. position - absolute (절대좌표), fixed (고정좌표), relative(상대좌표)
+12. float - left (왼쪽으로 붙이기) , right(오른쪽으로 붙이기)

@@ -1,0 +1,32 @@
+1. DML : 데이터 검색, 수정, 삭제 등.
+(1) INSERT : 데이터베이스 객체에 데이터를 입력
+     1) INSERT INTO 테이블명 VALUES (컬럼값..) ; 2) INSERT INTO 테이블명 (컬럼명 ..) VALUES (컬럼값 ...) ;
+(2) DELECT : 데이터베이스 객체에 데이터를 삭제
+     1) DELETE FROM 테이블명; 2) DELETE FROM 테이블명 WHERE 조건;
+(3) UPDATE : 기존에 존재하는 데이터베이스 객체 안의 데이터
+     1) UPDATE 테이블명 SET 컬럼명1 = 컬럼값1, 컬럼명2 = 컬럼값2 ...;
+(4) SELECT : 데이터베이스 객체로부터 데이터를 검색
+2. DDL : 데이터와 그 구조를 정의
+(1) CREATE : 데이터베이스 객체 생성
+     1) VARCHAR2(SIZE) 최대 4000BYTES 길이 문자, 데이터 최소크기는 1 한글은 3.
+     2) NUMBER(X) 최대 38자리 가능.
+     3) NUMBER(A, B) A는 전체길이, B는 소수점 이하 자리수 소수점은 길이에 포함 안됨. 
+     4) DATE : BC 4712/01/01 ~ AD 4712/12/31까지의 날짜
+     5) ROWNUM : 테이블에서 행의 논리적인 순서
+(2) DROP : 데이터베이스 객체를 삭제
+(3) ALTER : 기존에 존재하는 데이터베이스 객체를 다시 정의
+(4) TRUNCATE : 데이터베이스 객체 내용 삭제
+3. DCL : 데이터베이스 사용자의 권한 제어
+(1) GRANT : 데이터베이스 객체에 권한 부여
+(2) REVOKE : 이미 부여된 데이터베이스 객체의 권한을 취소
+(3) CREATE USER : 사용자 생성 - CREATE USER 계정 IDENTIFIED BY 비번 ;
+(4) DROP USER : 사용자 제거 - DROP USER 계정 CASCADE;  (삭제는 로그아웃 상태에만 가능)
+(5) GRANT : 권한 부여 - 1) GRANT 권한 TO 계정;
+(6) REVOKE : 권한 박탈 - 1) REVOKE 권한 TO 계정;
+★ 제약조건 ★
+NOT NULL : 필드에 NULL값을 포함하지 않음
+UNIQUE : 모든 행에 대해 유일해야 하는 값
+PRIMARY KEY : 유일한 키 (테이블의 각 행을 식별)
+FOREIGN KEY : 열과 참조된 테이블의 열 사이의 외래키 관계 (REFERENCES 예약어 사용 )
+CHECK : 참이어야 되는 조건
+DEFAULF : 제약 조건은 아니나 사용 가능.

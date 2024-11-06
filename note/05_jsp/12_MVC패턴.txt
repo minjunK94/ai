@@ -1,0 +1,4 @@
+MVC패턴의 이해 : Model, View, Controller를 뜻하는 용어로 개발 형태의 일종.
+Model : 데이터 베이스와의 관계를 담당 클라이언트의 요청에서 필요한 자료를 데이터베이스로 부터 추출하거나 수정 controller로 전달
+View : 사용자한테 보여지는 UI화면. JSP파일로 작성. Controller에서 어떤 View 컴포넌트를 보여줄지 결정.
+Controller : 클라이언트의 요청을 받고 적절한 Model에 지시. 전달된 데이터를 적절한 View에 전달

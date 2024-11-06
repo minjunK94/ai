@@ -1,0 +1,29 @@
+window 객체 : window 객체는 브라우저 기반 자바스크립트는 최상위 객체. 
+  지금까지 함수처럼 사용한 alert(), prompt()함수 모두 window객체의 메서드 var 키워드로 선언한 일반 변수도 모두 window 객체의 속성이된다
+window객체의 윈도우 생성 메서드 : open(URL, name, features, replace) : 새로운 window 객체를 생성합니다.
+    - window 객체의 open()메서드의 매개변수는 모두 옵션
+    - URL : 열고자 하는 HTML 페이지의 url
+    - name : 윈도우 간 통신하는데 사용하는 윈도우 이름 또는 target속성
+    - features : 윈도우 출력 모양을 지정하는 옵션
+location 객체 : 브라우저의 주소 표지줄과 관련된 객체
+    - href : 문서의 URL주소
+    - host : 호스트 이름과 포스 번호 
+    - hostname : 호스트 이름
+    - port : 포트번호
+    - pathname : 디렉토리 경로
+    - hash : 앵커 이름 (#~)
+    - search : 요청 매개변수
+    - protocal : 프로토콜 종류
+location 객체의 메서드 :
+    - assing(link) :현재 위치로 이동
+    - reload() : 새로고침
+    - replace(link) : 현재 위치를 이동
+location 객체는 페이지를 이동할 때 많이 사용
+ - location = ‘http://hanb.co.kr’;
+ - location.href = ‘http://hanb.co.kr’;
+ - location.assign(‘http://hanb.co.kr’); // 뒤로가기 사용 가능
+<<<<<<< HEAD
+ - location.replace(‘http://hanb.co.kr’); // 뒤로가기 사용 불가
+=======
+ - location.replace(‘http://hanb.co.kr’); // 뒤로가기 사용 불가
+>>>>>>> 8cb20b216a796eca8c2d01141127b81eb72695f0

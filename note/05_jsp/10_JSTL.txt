@@ -1,0 +1,29 @@
+JSTL(JSP Standard Tag Library) : 
+1) 출력 태그<c:out> - <c:out value="출력값 default="기본값" escapeXml="true or false > : false를 주면 특수기호를 해석
+2) 변수 설정 태그 <c:set> - <c:set var="변수명" value="설정값" target="객체" property="값" scope="범위"> : 어떤 객체의 속성값을 변수로 저장
+3) 변수를 제거하는 태그 <c:remove> - <c:remove var="변수명" scope="범위">
+4) 예외 처리 태그 <c:catch> - <c:catch var="변수명"
+5) 제어문 태그(if) <c:if> - <c:if var="조건 처리 변수명" scope="범위">
+6) 제어문 태그 <c:cgoose>
+- <c:cgoose> 
+    <c:when test=“조건1”> 처리 내용 </c:when>
+    <c:when test=“조건2”> 처리 내용 </c:when> 
+    <c:otherwise> 처리 내용 </c:otherwise>
+</c:choose>
+7) 반복문 태그 (for) <c:forEach> - <c:forEach var="변수명" items="객체명" begin="시작인덱스" end="끝인덱스" step="증감식" varStatus="상태변수">
+8) 페이지 이동 태그 <c:redirect url="url" >
+fmt : 국제화/형식화 액션. 국제화/형식화 기능을 제공해주는 JSTL 라이브러리 날짜와 숫자형식 등 처리
+1) 인코딩 관련 태그 <fmt:requestEncoding> : Request 객체로 부터 전달 받은 값들을 인코딩할 때 사용. 보통은 한글 값이 넘어올 경우 <fmt:requestEncoding value="utf-8"/> 로 한글에 맞게 인코딩 해준다
+2) 2-1 형식화 관련 태그 <fmt:formatNumber>
+  - <fmt:formatNumber var=”변수명” value=”값” type=”타입” pattern=”패턴” groupingUsed=”true or false” scope=”범위”>
+      - type은 숫자의 타입을 의미. 숫자, 통화, 퍼센트중 원하는 타입으로 설정 가능 pattern 속성은 지정한값을 어떤 패턴으로 변화 시킬지를 정 할수 있다 
+	(0,000.0 / ##,###.# 0은지정한 자리수 전부 출력 #은 지정해둔 자리수 안에 들어가면 출력할 자리수 만큼만 출력) 
+  - groupingUsed는 그룹기호의 포함 여부를 나타낸다 (소수점은 관여하지않고 3자리마다 ,출력)
+   2-2 <fmt:formatDate>
+  - <fmt:formatDate var=”변수명” value=”값” type=”타입” dateStyle=”값” timeStyle=”값” pattern=”패턴” scope=”범위”>
+      - value 속성에는 날짜 또는 시간을 입력 type 속성으로 날짜인지 시간인지 또는 날짜와 시간 둘다 포함한 타입인지를 지정 dateStyle 날짜의 스타일을 지정.  type 속성이 date 또는 both일 때만 적용 timeStyle 시간의 스타일을 지정.  
+<<<<<<< HEAD
+	type 속성이 date 또는 both일 때만 적용  
+=======
+	type 속성이 date 또는 both일 때만 적용  
+>>>>>>> 8cb20b216a796eca8c2d01141127b81eb72695f0

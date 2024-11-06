@@ -1,0 +1,20 @@
+HTML 파일 만들기 
+   - HTML페이지의 각 태그는 웹 브라우저에 의해 순차적으로 실행.
+   - 웹 브라우저는 head태그를 먼저 읽은 후 body 태그를 읽음 
+      - script 태그를 head에 넣으면 body 읽기전 실행
+      - body에 넣으면 head 실행 후 실행
+      - script 태그를 head 안에 넣어야 코드를 살펴보기 편함 특수한 경우아니면 head 안에 위치
+오류 확인 방법
+   - 오류 확인중 가장 좋은 방법은 크롬에서 F12를 눌러 console창에서 확인
+기본 문법
+   - Elements : 페이지 내의 문서 객체와 관련된 모든 속성을 실시간 확인
+   - Resources : 페이지를 실행하면서 불러들인 모든 리소스 파일 확인 (HTML5 데이터 베이스와 로컬 저장소, 쿠키, 캐시 표시)
+   - Network : Ajax를 포함한 모든 HTTP 요청 확인
+   - Timeline : 각 요소에 걸리는 시간 확인
+   - Profiles : 자바스크립트 분석 도움
+   - Audits : 페이지 최적화 정보 제공
+   - Console : 콘솔 로그 확인 (프로그램 실행된 상태에서 자바스크립트 코드 입력 가능)
+출력 (print) 메소드
+   -console.log()
+   - document.write()
+   - alert() *경고창 띄울때 사용

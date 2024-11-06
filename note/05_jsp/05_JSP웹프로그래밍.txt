@@ -1,0 +1,23 @@
+JSP 내부 객체
+  - 개발자가 객체를 생성하지 않고 바로 사용할 수 있는 객체가 내부객체 JSP에서 제공되는 내부객체는 JSP컴터이너에 의해 Servlet으로 변화될 때 자동으로 객체가 생성
+    대표적인 내부 객체 - request , response, out
+JSP 태그의 개념 이해 
+  - Servlet은 JAVA언어를 이용하여 문서를 작성하고, 출력객체(printWriter객체)를 이용하여 HTML코드를 삽입한다
+  - JSP는 Servlet과 반대로 HTML코드에 JAVA언어를 삽입하여 동적 문서를 만들수 있다
+  - HTML코드안에 JAVA코드를 삽입할수 있는 코드
+JSP 내부 객체
+  - request 객체 : 웹브라우저를 통해 서버에 어떤 정보를 요청하는 것을 request라 하며, 이러한 요청 정보는 request 내부객체가 관리한다
+  - request 객체 메소드 
+  - getRemoteAdd() : 웹서버에 연결할 클라이언트 IP주소
+  - request.getContextPath() : contextPath를 리턴
+  - getParameter(String name) : name에 해당하는 파라미터 값을 구함
+  - getContextPath : 웹 어플리케이션의 컨텍스트 패스를 얻는다
+  - getMethod() : get방식과 post방식을 구분
+  - getRequestURL() : 요청 url을 얻는다
+response 객체 : 웹브라우저의 요청에 응답하는 것을 response한다고 하며 이러한 응답의 정보는 reponse내부 객체가 갖고있다 
+  객체타입 : javax.servlet.httpServlertResponse
+      - sendRedirect(URL): 지정한 URL로 이동
+선언(declaration) : <%! java 코드 기술 %> 변수 또는 메소드를 선언할 때 사용 여기서 선언된 변수 및 메소드는 페이지 어느곳에서나 사용가능한 전역의 의미로 사용
+표현식(expression : <%= java 코드 기술 %> JSP페이지 내에서 사용되는 변수의 값 또는 메소드 호출 결과값을 출력하기 위해 사용 ;를 사용하지 않는다 
+지시자: JSP페이지의 전체적인 속성을 지정할 때 사용. page, include, taglib가 있으며 , <%@ 속성 %>형태
+JSP 동작 원리 : = [웹 브라우저 요청] → [a.jsp 를 a_ jsp.java로 변환] → [a_ jsp.java를 a_ jsp.class로 변환] → [웹브라우저에 HTML 형태로 응답]
