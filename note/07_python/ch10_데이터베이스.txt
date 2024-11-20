@@ -1,0 +1,25 @@
+SQLite 데이터 베이스 연결
+- SQLite 데이터 베이스는 별도의 DBMS없이 
+- SQL을 이용하여 DB엑세스 할 수 있도록 만든 간단한 디스크 기반의 DB 제공
+- C 라이브러리
+- SQLite는 프로토타입 을 만들 때 사용
+- 프로젝트 단계 : 분석 → 설계 → 구현 → 테스트 → 고객에게 배포 → 유지보수단계
+-              프로토타입(SQLite) 시제품   완제품(Oracle, MySql, Maria, ...)
+↓마크다운 문법
+[DB browser for SQLite](https://sqlitebrowser.org/dl/)
+
+데이터베이스 생성 및 연결
+- SQLite로 DB 연결시, DB파일이 있으면 연결 되고 , DB 파일이 없으면 빈DB 파일 생성됨
+conn = sqlite3.connect('data/... .db') 
+
+커서 객체 생성
+커서 객체 란 : SQL문 실행시키고 결과 데이터를 조회(SELETE, 그외) 하는데 사용된다
+cursor = conne.cursor()
+TABLE CREATE
+cursor.execute('''
+    CREATE TABLE MEMBER(
+        NAME TEXT,
+        AGE INT,
+        EMAIL TEXT
+    )
+''')
