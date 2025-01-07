@@ -1,0 +1,31 @@
+* DNN, RNN, 자연어 처리
+- accuracy, precision, recall
+- 비지도학습 vs 지도학습(DNN,
+- 스케일조정(정규화,표준화)하는 목적?
+	- 계산이 안정성 향상
+- model = Sequential() - 순차적 레이어 모델 생성
+- 이중 분류 DNN의 경우 출력층
+	- model.add(Dense(units = 1, activation = 'sigmoid / softmax'))
+- 학습과정 설정
+	- 손실함수(다중분류, 이중분류), 옵티마이저(adam), 	평가지표
+							- accuracy (전체 중 정답을 맞춘 비율) : 
+							                 = (TN+TP) / (TN+FP+FN+TP)
+							- precision(정밀도, 민감도 - True로 예측한 것중 맞춘 비율)
+							                 = TP / FP+TP
+							- recall(재현율 - 실제값이 True인 것 중 True로 맞춘 비율)
+							                 = TP / (FN+TP)l
+- accuracy를 늘이기 위한 방법
+	-데이터 확보
+	-레이어
+	-활성화 함수 : 은닉층에는 주로 relu계열
+	-optimizer, epoch 등을 조정
+- 과적합 방지를 위한 방법
+	- 데이터 확보★, Dropout
+	- 데이터 증강★
+	- 활성화 함수 relu
+- 모델 저장 : 딥러닝에서의 모델 저장 : *.h5
+	    머신러닝에서의 모델 저장 : *.pk
+
+- 자연어 처리 konlpy 하는용도 ( 형태소분석morphs(), 명사 만 추출 nouns(), 품사태깅pos()- 결과는 튜플리스트 로 출력)
+
+- RNN : 순서가 중요한 시계열 데이터 예측, 자연어 생성, 텍스트 해석
