@@ -9,10 +9,11 @@
           <img src="{{ url_for('static', filename='img/upload.png')}}"
                width="100">
           <form action="/" method="post" enctype="multipart/form-data">
-            <input type="file" name="file">
+<!--            <input type="file" name="file">-->
+            {{ form.csrf_token() }}
+            {{ form.files() }}
             <input type="submit" class="btn btn-primary btn-lg">
           </form>
-          <p class="col-md-8 fs-4">첨부 하실 파일을 제출 해주세요</p>
         </div>
       </div>
     </div>

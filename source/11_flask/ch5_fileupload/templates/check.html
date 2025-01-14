@@ -8,6 +8,12 @@
           <hr style="width:100%; color:red;">
           <img src="{{ url_for('static', filename='img/tick.png')}}"
                width="100">
+          <br>
+          {#{{ fileinfo | tojson }}#} <!-- {##} : Jinja2 주석-->
+          <!--Jinja2 템플릿에서는 json형식의 표현이 의도치 않게 나올수있음-->
+            {{ fileinfo['ctime'].strftime('%Y-%m-%d %H:%M:%S') }}
+          <br>
+          {{ fileinfo['size'] }}
         </div>
       </div>
     </div>
