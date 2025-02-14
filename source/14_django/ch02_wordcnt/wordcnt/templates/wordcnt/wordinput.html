@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}단어 입력{% endblock %}
+
+{% block content %}
+    <h1 onclick="lovation='{% url 'index' %}'">글자수 및 단어수 세기(Welcomepage)</h1>
+    <a href="/wordcnt/about">ABOUT</a>
+    <a href="{% url 'wordcnt:about' %}">ABOUT</a>
+    <form action="{% url 'wordcnt:result' %}" method="post">
+        {% csrf_token %}
+        <textarea name="fulltxt" cols="40" rows="10"></textarea>
+        <input type="submit" value="계산결과">
+    </form>
+{% endblock %}

@@ -1,8 +1,5 @@
+from sqlalchemy.orm import Session
 from sqlalchemy import select
-from database.connection import SessionFactory
-from database.orm import ToDo
-from sqlalchemy import select
-
 from database.connection import SessionFactory
 from database.orm import ToDo
 
